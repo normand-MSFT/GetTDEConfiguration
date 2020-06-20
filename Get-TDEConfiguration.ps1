@@ -125,6 +125,6 @@ Get-AzSubscription | ForEach-Object {
     [void]$result.Add($sub)
 }
 
-$outFile = Join-Path -Path $PSScriptRoot -ChildPath outout.json
+$outFile = Join-Path -Path $PSScriptRoot -ChildPath output.json
 $result | ConvertTo-Json -Depth 5 | Tee-Object -FilePath $outFile 
 Write-Host "Result copied to $outFile"
